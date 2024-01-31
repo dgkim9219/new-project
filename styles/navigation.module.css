@@ -1,0 +1,10 @@
+.nav{
+    background-color: whitesmoke;
+    padding: 0px 0px;
+}
+
+.nav ul{
+    display: flex;
+    gap: 50px;
+}
+

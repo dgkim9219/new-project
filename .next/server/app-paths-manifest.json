@@ -1,0 +1,9 @@
+{
+  "/calender/page": "app/calender/page.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/endProduct/page": "app/endProduct/page.js",
+  "/oligo/page": "app/oligo/page.js",
+  "/pc/page": "app/pc/page.js",
+  "/_not-found": "app/_not-found.js",
+  "/main/page": "app/main/page.js"
+}

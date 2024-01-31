@@ -1,0 +1,4 @@
+.cal-container{
+    width: 100%; /* 부모 요소의 너비에 맞춤 */
+    height: 100vh; /* 화면의 높이에 맞춤 */
+}
