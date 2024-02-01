@@ -1,0 +1,2 @@
+# new-project
+just hobby
