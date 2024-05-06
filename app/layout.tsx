@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import Navigation from "../components/navigation";
 import {Metadata} from "next";
+import Providers from '../components/providers'
 
 
 export const metadata: Metadata = {
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
+        <Providers>
         <Navigation />
         {children}
-        </body>
+        </Providers>
+      </body>
     </html>
   )
 }

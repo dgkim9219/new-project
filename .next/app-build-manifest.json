@@ -1,71 +1,27 @@
 {
   "pages": {
+    "/(home)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(home)/page.css",
+      "static/chunks/app/(home)/page.js"
+    ],
     "/layout": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/901-b643883e5140d5c8.js",
-      "static/css/b8e0806815cfb9e0.css",
-      "static/chunks/app/layout-672041b0a266596a.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/not-found": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/app/not-found-97709a4e3cadd8c6.js"
-    ],
-    "/calender/page": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/a6eb9415-9fb4dff577e4b079.js",
-      "static/chunks/191-69a2580ebc378bfc.js",
-      "static/chunks/app/calender/page-556aa4820e4ee0da.js"
-    ],
-    "/endProduct/page": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/app/endProduct/page-717af3dc6d402a49.js"
-    ],
-    "/pc/page": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/app/pc/page-b95a0c43acb116ee.js"
-    ],
-    "/(home)/page": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/app/(home)/page-87858822b22def89.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
     ],
     "/oligo/page": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/app/oligo/page-7aa2baa1a8bcd2fd.js"
-    ],
-    "/main/page": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/app/main/page-715c2c36ca71e4e9.js"
-    ],
-    "/main/layout": [
-      "static/chunks/webpack-31816508c6f3b151.js",
-      "static/chunks/fd9d1056-d49c7861665f9acb.js",
-      "static/chunks/69-7d6c32a9ff4ec35c.js",
-      "static/chunks/main-app-3b95016a94ed9d82.js",
-      "static/chunks/app/main/layout-51c23283c012053d.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/oligo/page.css",
+      "static/chunks/app/oligo/page.js"
     ]
   }
 }

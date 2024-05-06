@@ -1,1 +1,309 @@
 npm run dev   ----> 개발 서버 실행
+
+                          <td
+                            className={styles.cell}
+                            style={{
+                              backgroundColor: cell.column.id === 'concatenated_pmMono' && row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-041")
+                                ? (row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLotQCR.includes("OK") 
+                                  ? "green" : (row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLotQCR.includes("NG"))
+                                    ? "red"                                  
+                                  : (row.original.concatenated_pmMono ? "blue" : "gray")) 
+                                : "black"
+                            }}
+                            {...cell.getCellProps()}
+                          >
+                            {cell.render("Cell")}
+                          </td>    
+
+
+                          <td
+                            className={styles.cell}
+                            style={{
+                              backgroundColor: 
+                                cell.column.id === 'concatenated_pmMono' && row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-041") &&
+                                  (row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLotQCR.includes("OK")) ? "green" :
+                                cell.column.id === 'concatenated_pmMono' && row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-041") &&
+                                  (row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLotQCR.includes("NG")) ? "red" :
+                                cell.column.id === 'concatenated_pmMono' && row.original.concatenated_pmMono ? "blue" : 
+
+                                cell.column.id === 'concatenated_tomMono' && row.original.concatenated_tomMono &&
+                                  (row.original.concatenated_tomMonoLotQCR && row.original.concatenated_tomMonoLotQCR.includes("OK")) ? "green" :
+                                cell.column.id === 'concatenated_tomMono' && row.original.concatenated_tomMono &&
+                                  (row.original.concatenated_tomMonoLotQCR && row.original.concatenated_tomMonoLotQCR.includes("NG")) ? "red" :
+                                cell.column.id === 'concatenated_tomMono' && row.original.concatenated_tomMono ? "blue" : "gray"
+                            }}
+                            {...cell.getCellProps()}
+                          >
+                            {cell.render("Cell")}
+                          </td>    
+
+
+
+
+
+                          <td
+                            className={styles.cell}
+                            style={{
+                              backgroundColor: (() => {
+                                switch (cell.column.id) {
+                                  case 'planNo':
+                                    return "white"
+                                  case 'concatenated_matCmf1':
+                                    return "white"
+                                  case 'mstMatCmf2':
+                                    return "white"
+                                  case 'concatenated_qty':
+                                    return "white"
+                                  case 'concatenated_elution':
+                                    return !row.original.concatenated_elution ? "blue" : "green"
+                                  case 'concatenated_epoch':
+                                    return !row.original.concatenated_epoch ? "blue" : "green"
+                                  case 'concatenated_pmMono':
+                                    return row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-041") &&
+                                      (row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLotQCR.includes("OK")) ? "green" :
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-041") &&
+                                      (row.original.concatenated_pmMonoLotQCR && !row.original.concatenated_pmMonoLotQCR.includes("OK") && row.original.concatenated_pmMonoLotQCR.includes("NG")) ? "red" :
+                                      (row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-041") && !row.original.concatenated_pmMonoLotQCR &&
+                                      !row.original.concatenated_pmMono) ? "blue" : 
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-041") &&
+                                      !row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLot ? "yellow" :
+                                      (row.original.concatenated_operCode && !row.original.concatenated_operCode.includes("OPR-041")) ? "black" : "gray";
+                                  case 'concatenated_tomMono':
+                                    return row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-042") &&
+                                      (row.original.concatenated_tomMonoLotQCR && row.original.concatenated_tomMonoLotQCR.includes("OK")) ? "green" :
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-042") &&
+                                      (row.original.concatenated_tomMonoLotQCR && !row.original.concatenated_tomMonoLotQCR.includes("OK") && row.original.concatenated_tomMonoLotQCR.includes("NG")) ? "red" :
+                                      (row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-042") && !row.original.concatenated_tomMonoLotQCR &&
+                                      !row.original.concatenated_tomMono) ? "blue" : 
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-042") &&
+                                      !row.original.concatenated_tomMonoLotQCR && row.original.concatenated_tomMonoLot ? "yellow" :
+                                      (row.original.concatenated_operCode && !row.original.concatenated_operCode.includes("OPR-042")) ? "black" : "gray";
+                                  case 'concatenated_omMono':
+                                    return row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-040") &&
+                                      (row.original.concatenated_omMonoLotQCR && row.original.concatenated_omMonoLotQCR.includes("OK")) ? "green" :
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-040") &&
+                                      (row.original.concatenated_omMonoLotQCR && !row.original.concatenated_omMonoLotQCR.includes("OK") && row.original.concatenated_omMonoLotQCR.includes("NG")) ? "red" :
+                                      (row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-040") && !row.original.concatenated_omMonoLotQCR &&
+                                      !row.original.concatenated_omMono) ? "blue" : 
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-040") &&
+                                      !row.original.concatenated_omMonoLotQCR && row.original.concatenated_omMonoLot ? "yellow" :
+                                      (row.original.concatenated_operCode && !row.original.concatenated_operCode.includes("OPR-040")) ? "black" : "gray";
+                                  case 'concatenated_minisemi1':
+                                    return row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-050") &&
+                                      (row.original.concatenated_minisemi1LotQCR && row.original.concatenated_minisemi1LotQCR.includes("OK")) ? "green" :
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-050") &&
+                                      (row.original.concatenated_minisemi1LotQCR && !row.original.concatenated_minisemi1LotQCR.includes("OK") && row.original.concatenated_minisemi1LotQCR.includes("NG")) ? "red" :
+                                      (row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-050") && !row.original.concatenated_minisemi1LotQCR &&
+                                      !row.original.concatenated_minisemi1) ? "blue" : 
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-050") &&
+                                      !row.original.concatenated_minisemi1LotQCR && row.original.concatenated_minisemi1Lot ? "yellow" :
+                                      (row.original.concatenated_operCode && !row.original.concatenated_operCode.includes("OPR-050")) ? "black" : "gray";
+                                  case 'concatenated_semi1':
+                                    return row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-060") &&
+                                      (row.original.concatenated_semi1LotQCR && row.original.concatenated_semi1LotQCR.includes("OK")) ? "green" :
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-060") &&
+                                      (row.original.concatenated_semi1LotQCR && !row.original.concatenated_semi1LotQCR.includes("OK") && row.original.concatenated_semi1LotQCR.includes("NG")) ? "red" :
+                                      (row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-060") && !row.original.concatenated_semi1LotQCR &&
+                                      !row.original.concatenated_semi1) ? "blue" : 
+                                      row.original.concatenated_operCode && row.original.concatenated_operCode.includes("OPR-060") &&
+                                      !row.original.concatenated_semi1LotQCR && row.original.concatenated_semi1Lot ? "yellow" :
+                                      (row.original.concatenated_operCode && !row.original.concatenated_operCode.includes("OPR-060")) ? "black" : "gray";
+                                  case 'concatenated_semi2':
+                                    return row.original.concatenated_semi2LotQCR && row.original.concatenated_semi2LotQCR.includes("OK") ? "green" :
+                                      row.original.concatenated_semi2LotQCR && !row.original.concatenated_semi2LotQCR.includes("OK") && row.original.concatenated_semi2LotQCR.includes("NG") ? "red" :
+                                      !row.original.concatenated_semi2LotQCR && !row.original.concatenated_semi2 ? "blue" : 
+                                      !row.original.concatenated_semi2LotQCR && row.original.concatenated_semi2Lot ? "yellow" : "gray";
+                                  default:
+                                    return "gray";
+                                }
+                              })()
+                            }}
+                            {...cell.getCellProps()}
+                          >
+                            {cell.render("Cell")}
+                          </td>   
+
+
+
+
+
+
+import styles from "../styles/table.module.scss";
+import * as React from "react";
+import { useTable } from "react-table";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+const getCellStyle = (cell, row) => {
+  const { concatenated_operCode } = row.original;
+  switch (cell.column.id) {
+    case 'planNo':
+    case 'concatenated_matCmf1':
+    case 'mstMatCmf2':
+    case 'concatenated_qty':
+      return "white";
+    case 'concatenated_elution':
+    case 'concatenated_epoch':
+      return !cell.value ? "blue" : "green";
+    case 'concatenated_pmMono':
+      return concatenated_operCode && concatenated_operCode.includes("OPR-041") ?
+        (row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLotQCR.includes("OK") ? "green" :
+        (row.original.concatenated_pmMonoLotQCR && row.original.concatenated_pmMonoLotQCR.includes("NG")) ? "red" :
+        (row.original.concatenated_pmMono ? "blue" : "gray")) : "black";
+    case 'concatenated_tomMono':
+      return concatenated_operCode && concatenated_operCode.includes("OPR-042") ?
+        (row.original.concatenated_tomMonoLotQCR && row.original.concatenated_tomMonoLotQCR.includes("OK") ? "green" :
+        (row.original.concatenated_tomMonoLotQCR && row.original.concatenated_tomMonoLotQCR.includes("NG")) ? "red" :
+        (row.original.concatenated_tomMono ? "blue" : "gray")) : "black";
+    case 'concatenated_omMono':
+      return concatenated_operCode && concatenated_operCode.includes("OPR-040") ?
+        (row.original.concatenated_omMonoLotQCR && row.original.concatenated_omMonoLotQCR.includes("OK") ? "green" :
+        (row.original.concatenated_omMonoLotQCR && row.original.concatenated_omMonoLotQCR.includes("NG")) ? "red" :
+        (row.original.concatenated_omMono ? "blue" : "gray")) : "black";
+    case 'concatenated_minisemi1':
+      return concatenated_operCode && concatenated_operCode.includes("OPR-050") ?
+        (row.original.concatenated_minisemi1LotQCR && row.original.concatenated_minisemi1LotQCR.includes("OK") ? "green" :
+        (row.original.concatenated_minisemi1LotQCR && row.original.concatenated_minisemi1LotQCR.includes("NG")) ? "red" :
+        (row.original.concatenated_minisemi1 ? "blue" : "gray")) : "black";
+    case 'concatenated_semi1':
+      return concatenated_operCode && concatenated_operCode.includes("OPR-060") ?
+        (row.original.concatenated_semi1LotQCR && row.original.concatenated_semi1LotQCR.includes("OK") ? "green" :
+        (row.original.concatenated_semi1LotQCR && row.original.concatenated_semi1LotQCR.includes("NG")) ? "red" :
+        (row.original.concatenated_semi1 ? "blue" : "gray")) : "black";
+    case 'concatenated_semi2':
+      return row.original.concatenated_semi2LotQCR && row.original.concatenated_semi2LotQCR.includes("OK") ? "green" :
+        row.original.concatenated_semi2LotQCR && !row.original.concatenated_semi2LotQCR.includes("OK") && row.original.concatenated_semi2LotQCR.includes("NG") ? "red" :
+        !row.original.concatenated_semi2LotQCR && !row.original.concatenated_semi2 ? "blue" : 
+        !row.original.concatenated_semi2LotQCR && row.original.concatenated_semi2Lot ? "yellow" : "gray";
+    default:
+      return "gray";
+  }
+};
+
+export default function Table(): JSX.Element {
+  const [dgSEPTD, setDgSEPTD] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("/api/Query_dgSuperEndPointTable");
+      const modifiedData = response.data.map((item) => ({
+        ...item,
+        concatenated_qty: parseInt(item.concatenated_qty) // 정수로 변환
+      }));
+      setDgSEPTD(modifiedData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: "생산지시 번호",
+        accessor: "planNo",
+      },
+      {
+        Header: "cat.no",
+        accessor: "concatenated_matCmf1",
+      },
+      {
+        Header: "구성품",
+        accessor: "mstMatCmf2",
+      },
+      {
+        Header: "수량",
+        accessor: "concatenated_qty",
+      },
+      {
+        Header: "Elution",
+        accessor: "concatenated_elution",
+      },
+      {
+        Header: "농도측정",
+        accessor: "concatenated_epoch",
+      },
+      {
+        Header: "PM mono",
+        accessor: "concatenated_pmMono",
+      },
+      {
+        Header: "TOM mono",
+        accessor: "concatenated_tomMono",
+      },
+      {
+        Header: "OM mono",
+        accessor: "concatenated_omMono",
+      },
+      {
+        Header: "소량생산 반제품1",
+        accessor: "concatenated_minisemi1",
+      },
+      {
+        Header: "반제품1",
+        accessor: "concatenated_semi1",
+      },
+      {
+        Header: "반제품2",
+        accessor: "concatenated_semi2",
+      },
+      {
+        Header: "완료일",
+        accessor: "halbDate",
+      },
+      {
+        Header: "비고",
+        accessor: "",
+      },
+    ],
+    []
+  );
+
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data: dgSEPTD });
+
+  return (
+    <div className="App">
+      <div className={styles.page}>
+        <div className={styles.page__body}>
+          <div className={styles.container}>
+            <table className={styles.table} {...getTableProps()}>
+              <thead>
+                {headerGroups.map((headerGroup) => (
+                  <tr {...headerGroup.getHeaderGroupProps()}>
+                    {headerGroup.headers.map((column) => (
+                      <th className={styles.headerCell} {...column.getHeaderProps()}>{column.render("Header")}</th>
+                    ))}
+                  </tr>
+                ))}
+              </thead>
+              <tbody {...getTableBodyProps()}>
+                {rows.map((row) => {
+                  prepareRow(row);
+                  return (
+                    <tr {...row.getRowProps()}>
+                      {row.cells.map((cell) => (
+                        <td
+                          className={styles.cell}
+                          style={{
+                            backgroundColor: getCellStyle(cell, row),
+                          }}
+                          {...cell.getCellProps()}
+                        >
+                          {cell.render("Cell")}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>  
+      </div>
+    </div>
+  );
+}

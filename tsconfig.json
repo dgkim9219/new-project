@@ -20,14 +20,15 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/main/page.jsx", "components/Jinhengyul.js"  ],
   "exclude": [
     "node_modules"
   ]

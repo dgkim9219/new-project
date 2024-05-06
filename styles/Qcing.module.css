@@ -1,0 +1,15 @@
+.div1 {
+    font-weight: 800;
+};
+
+.div2{
+    width: 100%;
+};
+
+.div3{
+    height: var(--gridHeight);
+    width: auto;
+    margin: 0 auto;
+    overflow: auto;
+};
+

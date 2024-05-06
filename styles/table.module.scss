@@ -1,0 +1,295 @@
+.page {
+  position: relative; /* 요소를 문서에 대해 고정 위치로 배치합니다. */
+  // bottom: 10px; /* 요소의 하단을 문서의 하단에 배치합니다. */
+  // right: 10px; /* 요소의 왼쪽을 문서의 오른쪽에 배치합니다. */
+  // height: 100%;
+  // width: 1270px;
+  // overflow-y: scroll;
+  max-height: 90vh;
+  overflow-y: auto;
+  // box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  // border: 1px solid rgb(0, 0, 0); /* 테두리 스타일과 색상 설정 */  
+}
+
+.searchBox {
+  position: relative;
+  width: fit-content;
+  // height: 30px;
+  top: 0;
+  left: 0;
+  // padding: right 30px;
+}
+
+.input {
+  // position: fixed;
+  // top: 200px;
+  // left: 200px;
+  height: 30px;
+  width: 200px;
+  margin: 10px;
+  padding-right: 30px;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 0;
+  left: 210px;
+  height: 100%; /* 부모 요소의 높이와 일치하도록 설정합니다. */
+  display: flex;
+  align-items: center;
+  padding-right: 11px;
+}
+
+.searchIcon {
+  width: 30px; /* 아이콘의 크기를 조정합니다. */
+  height: 30px;
+}
+
+.coment {
+  position: relative;
+  top: 0;
+  left: 0%;
+  font-weight: bold;
+}
+
+.comentIcon {
+  // top: 30px;
+  width: 30px;
+  height: 25px;
+  padding-left: 30px;
+  // border: 1px solid rgb(0, 0, 0);
+}
+
+// .addRow {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
+// .page__body {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
+.table1 {
+  // position: static;
+  // top: auto;
+  // width: 1260px;
+  // height: 55px;
+  border-collapse: collapse;
+  // overflow-y: auto;
+
+  background-color: darkgrey;
+}
+
+
+.container {
+  // position: fixed; /* 요소를 문서에 대해 고정 위치로 배치합니다. */
+  // overflow-y: auto;
+  // height: 695px;
+  // width: 1270px;
+  // transform: translate(0, 0); /* 기존의 이동 변환을 제거합니다. */
+  margin: 0; /* 마진을 초기화합니다. */
+
+
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 25%;
+  //  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-color: cadetblue;
+    // border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+    // border-radius: 0 5px 5px 0;
+  }
+}
+
+.table2 {
+  // width: 100%;
+  // height: 10%;
+  border-collapse: collapse;
+  // overflow-y: scroll;
+  // max-height: 90vh;
+  // overflow-y: auto;
+  background-color: darkgrey;
+}
+
+.thead {
+  background-color: #ffffff;
+}
+
+.tbody {
+  // background-color: #FFFFB5;
+  font-weight: bold;
+}
+
+.cell {
+  width: 100px;
+  height: 60px;
+  padding: 0px;
+  // background-color: rgba(208, 208, 208, 0.61);
+  // color: black;
+  text-align: center;
+  border: 1px solid #000; /* 테두리 스타일과 색상 설정 */
+  font-size: small;
+  // border: 1px solid #000;
+  background-size:cover;
+  background-position: center;
+  // background-color: rgba(255, 255, 255, 0.5);
+}
+
+.headerCell {
+  width: 100px;
+  padding: 0px;
+  background-color: #20c130;
+  // color:#ffffff;
+  text-align: center;
+  border: 1px solid #000; /* 테두리 스타일과 색상 설정 */
+}
+
+
+.addRow {
+  margin: 5px;
+}
+
+.addRowInput {
+  margin: 10px;
+  width: 100px;
+}
+
+.addRowLabel {
+  font: bold;
+}
+
+// Modal 스타일 추가
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+  // align-items:stretch;
+  // display: 'flex';
+  // align-items:first baseline;
+}
+
+.modalInput {
+  // position:sticky;
+  // height: 50px;
+  width: 150px;
+  // height: 10vh;
+  margin-left: 10px;
+}
+
+.closeModal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Datepicker container */
+.react-datepicker {
+  font-family: Arial, sans-serif;
+  // padding-left: 10px;
+  // margin: 10px;
+}
+
+/* Datepicker input field */
+.react-datepicker__input-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Datepicker calendar */
+.react-datepicker__calendar {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Datepicker header */
+.react-datepicker__header {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Datepicker day */
+.react-datepicker__day {
+  color: #333;
+}
+
+/* Datepicker selected day */
+.react-datepicker__day--selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Datepicker disabled day */
+.react-datepicker__day--disabled {
+  color: #ccc;
+}
+
+/* Datepicker day in selected month */
+.react-datepicker__day--in-selecting-range {
+  background-color: rgba(0, 123, 255, 0.3);
+}
+
+/* Datepicker day in range */
+.react-datepicker__day--in-range {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Datepicker today */
+.react-datepicker__day--today {
+  font-weight: bold;
+}
+
+/* Datepicker weekday */
+.react-datepicker__day-name {
+  color: #333;
+}
+
+/* Datepicker outside month */
+.react-datepicker__day--outside-month {
+  color: #ccc;
+}
+
+/* Datepicker previous and next month button */
+.react-datepicker__navigation {
+  top: 10px;
+}

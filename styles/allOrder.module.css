@@ -1,0 +1,28 @@
+.table1, .table2 {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+.headerCell {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.cell {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: right;
+}
+
+.table1 th, .table2 th {
+  background-color: #f2f2f2;
+}
+
+.table1 tr:nth-child(even), .table2 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table1 tr:hover, .table2 tr:hover {
+  background-color: #ddd;
+}

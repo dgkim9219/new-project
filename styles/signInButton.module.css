@@ -1,0 +1,23 @@
+.btn1 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 1px;
+    border-radius: 0.75rem;
+    background-color: #F87171;
+    font-size: 20px;
+
+}
+
+.btn2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 1px;
+    border-radius: 0.75rem;
+    background-color: #FBBF24;
+    font-size: 20px;
+
+}

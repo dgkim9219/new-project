@@ -11,7 +11,7 @@ export default function MainLayout({
   return (
     <div>
         {children}
-        &copy; Next JS is great!
+        {/* &copy; Next JS is great! */}
     </div>
   );
 }

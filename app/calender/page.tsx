@@ -1,16 +1,15 @@
-"use client";
 
-import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
+import Calendar from '../../components/calendar';
+import styles from '../../styles/calendarPage.module.css';
 
-export default class DemoApp extends React.Component {
-  render() {
-    return (
-      <FullCalendar
-        plugins={[ dayGridPlugin ]}
-        initialView="dayGridMonth"
-      />
-    )
-  }
+
+export default function calendar() {
+
+  return (
+    <div className={styles.div1}>
+      <div className={styles.div4}>
+        <Calendar />
+      </div>
+    </div>
+  );
 }

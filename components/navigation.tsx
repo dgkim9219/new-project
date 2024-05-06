@@ -9,29 +9,23 @@ export default function Navigation(){
     return (
         <nav className={styles.nav}>
             <ul>
-                <li>
+                <li className={path === "/" ? styles.active : ""}>
                     <Link href="/">Home</Link>
-                    {path === "/" ? "🔥" : ""}
                 </li>
-                <li>
+                <li className={path === "/main" ? styles.active : ""}>
                     <Link href="/main">Main</Link>
-                    {path === "/main" ? "🔥" : ""}
                 </li>
-                <li>
+                <li className={path === "/calender" ? styles.active : ""}>
                     <Link href="/calender">Calender</Link>
-                    {path === "/calender" ? "🔥" : ""}
                 </li>
-                <li>
+                <li className={path === "/oligo" ? styles.active : ""}>
                     <Link href="/oligo">Oligo</Link>
-                    {path === "/oligo" ? "🔥" : ""}
                 </li>
-                <li>
+                <li className={path === "/pc" ? styles.active : ""}>
                     <Link href="/pc">PC</Link>
-                    {path === "/pc" ? "🔥" : ""}
                 </li>
-                <li>
+                <li className={path === "/endProduct" ? styles.active : ""}>
                     <Link href="/endProduct">완제품</Link>
-                    {path === "/endProduct" ? "🔥" : ""}
                 </li>
             </ul>
         </nav>
